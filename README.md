@@ -1,2 +1,2 @@
 # flutter_hybrid
-Flutter和Android或iOS通信
+Android和Flutter通信
