@@ -1,5 +1,6 @@
-package com.android.hybrid
+package com.android.hybrid.old_bridge
 
+import com.android.hybrid.R
 import com.android.hybrid.base.FlutterFragment
 
 class TestFragment: FlutterFragment() {

@@ -1,4 +1,4 @@
-package com.android.hybrid.flutter.channel;
+package com.android.hybrid.old_bridge.channel;
 
 import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.EventChannel;

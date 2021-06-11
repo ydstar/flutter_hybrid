@@ -1,4 +1,4 @@
-package com.android.hybrid.flutter;
+package com.android.hybrid.old_bridge;
 
 import android.app.Activity;
 import android.content.Context;
@@ -16,7 +16,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 import com.android.hybrid.R;
-import com.android.hybrid.flutter.channel.IShowMessage;
+import com.android.hybrid.old_bridge.channel.IShowMessage;
 
 
 public class UIPresenter implements View.OnClickListener {

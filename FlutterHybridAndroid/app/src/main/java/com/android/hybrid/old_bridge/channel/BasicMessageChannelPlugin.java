@@ -1,4 +1,4 @@
-package com.android.hybrid.flutter.channel;
+package com.android.hybrid.old_bridge.channel;
 
 import android.app.Activity;
 import android.widget.Toast;

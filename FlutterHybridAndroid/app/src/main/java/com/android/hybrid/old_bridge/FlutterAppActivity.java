@@ -1,4 +1,4 @@
-package com.android.hybrid.flutter;
+package com.android.hybrid.old_bridge;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,10 +7,10 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import com.android.hybrid.flutter.channel.BasicMessageChannelPlugin;
-import com.android.hybrid.flutter.channel.EventChannelPlugin;
-import com.android.hybrid.flutter.channel.IShowMessage;
-import com.android.hybrid.flutter.channel.MethodChannelPlugin;
+import com.android.hybrid.old_bridge.channel.BasicMessageChannelPlugin;
+import com.android.hybrid.old_bridge.channel.EventChannelPlugin;
+import com.android.hybrid.old_bridge.channel.IShowMessage;
+import com.android.hybrid.old_bridge.channel.MethodChannelPlugin;
 
 import io.flutter.embedding.android.FlutterActivity;
 
