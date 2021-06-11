@@ -1,4 +1,4 @@
-package com.android.hybrid.base;
+package com.android.hybrid.fragment;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -13,9 +13,14 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 
-
+/**
+ * Author: 信仰年轻
+ * Date: 2021-06-11 15:20
+ * Email: hydznsqk@163.com
+ * Des:
+ */
 public abstract class BaseFragment extends Fragment  {
-    protected View layoutView;
+    protected View mLayoutView;
 
     @LayoutRes
     public abstract int getLayoutId();
@@ -23,8 +28,8 @@ public abstract class BaseFragment extends Fragment  {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        layoutView = inflater.inflate(getLayoutId(), container, false);
-        return layoutView;
+        mLayoutView = inflater.inflate(getLayoutId(), container, false);
+        return mLayoutView;
     }
 
     //检测 宿主 是否还存活

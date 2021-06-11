@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">FlutterHybridAndroid</string>
+
+    <string name="if_home">&#xe8c6;</string>
+    <string name="if_recommend">&#xe63f;</string>
+    <string name="if_chat">&#xe63c;</string>
+    <string name="if_profile">&#xe634;</string>
+    <string name="if_category">&#xe600;</string>
+    <string name="if_favorite">&#xe639;</string>
+    <string name="if_favorite1">&#xe620;</string>
+
+    <string name="title_recommend">推荐,点击标题(Android调用Flutter)</string>
+    <string name="title_favorite">收藏,点击标题(Android调用Flutter)</string>
 </resources>

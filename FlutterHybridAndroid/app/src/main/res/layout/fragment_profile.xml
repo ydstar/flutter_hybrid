@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
+    android:background="#fff"
+    android:orientation="vertical">
 
-    android:orientation="vertical"
-    tools:context=".MainActivity">
 
     <RelativeLayout
         android:id="@+id/rl_title"
+        android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:background="#fff"
         android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:visibility="visible">
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/title"
@@ -31,31 +29,16 @@
 
     <View
         android:id="@+id/title_line"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="2px"
-        android:background="#eeeeee"
-        android:visibility="visible" />
-
+        android:background="#eeeeee" />
 
     <TextView
-        android:id="@+id/tv_demo1"
+        android:text="我的"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-
-        android:text="Android嵌套Flutter并通信"
-        android:textColor="#0077cc"
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/tv_demo2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-
-        android:text="Flutter嵌套Android(View)"
-        android:textColor="#0077cc"
-        android:textSize="20sp" />
+        android:layout_height="wrap_content"/>
 
 
 </LinearLayout>
