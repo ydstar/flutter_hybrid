@@ -15,15 +15,13 @@ import kotlinx.android.synthetic.main.fragment_flutter.*
  * Author: 信仰年轻
  * Date: 2021-06-11 15:20
  * Email: hydznsqk@163.com
- * Des:
+ * Des: 收藏页面
  */
 class FavoriteFragment : FlutterFragment(FlutterCacheManager.MODULE_NAME_FAVORITE) {
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setTitle(getString(R.string.title_favorite))
-
 
         //点击标题,Android 调用Flutter,然后Flutter返回给Android
         title.setOnClickListener {
@@ -54,5 +52,8 @@ class FavoriteFragment : FlutterFragment(FlutterCacheManager.MODULE_NAME_FAVORIT
         }
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+    }
 
 }

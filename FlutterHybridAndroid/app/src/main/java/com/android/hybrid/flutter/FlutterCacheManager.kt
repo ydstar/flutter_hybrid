@@ -10,15 +10,16 @@ import io.flutter.embedding.engine.FlutterEngineCache
 import io.flutter.embedding.engine.FlutterJNI
 import io.flutter.embedding.engine.dart.DartExecutor
 import io.flutter.embedding.engine.loader.FlutterLoader
+import java.lang.Exception
 
 /**
  * Author: 信仰年轻
  * Date: 2021-06-11 13:50
  * Email: hydznsqk@163.com
- * Des:
- * Flutter优化提升加载速度，实现秒开Flutter模块
- * 让预加载不损失"首页"性能
- * 实例化多个Flutter引擎并分别加载不同的dart 入口文件
+ * Des:Flutter优化提升加载速度，实现秒开Flutter模块
+ * 2个要要求
+ * 1.让预加载不损失"首页"性能
+ * 2.实例化多个Flutter引擎并分别加载不同的dart 入口文件
  */
 class FlutterCacheManager private constructor() {
 
@@ -99,12 +100,17 @@ class FlutterCacheManager private constructor() {
      * 销毁FlutterEngine
      */
     fun destroyCached(moduleName: String){
-        val map = FlutterEngineCache.getInstance()
-        if(map.contains(moduleName)){
-            map[moduleName]?.apply {
-                destroy()
+        try {
+            val map = FlutterEngineCache.getInstance()
+            if(map.contains(moduleName)){
+                map[moduleName]?.apply {
+                    destroy()
+                }
+                map.remove(moduleName)
             }
-            map.remove(moduleName)
+        }catch (e:Exception){
+
         }
+
     }
 }

@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.fragment_flutter.*
  * Author: 信仰年轻
  * Date: 2021-06-11 15:20
  * Email: hydznsqk@163.com
- * Des:
+ * Des: 推荐页面
  */
 class RecommendFragment : FlutterFragment(FlutterCacheManager.MODULE_NAME_RECOMMEND) {
 
@@ -50,6 +50,8 @@ class RecommendFragment : FlutterFragment(FlutterCacheManager.MODULE_NAME_RECOMM
                 })
         }
     }
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+    }
 
 }
