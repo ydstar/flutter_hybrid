@@ -11,7 +11,7 @@ Android和Flutter通信
 flutter_hybrid
 │   README.md
 │
-└───FlutterHybridAndroid 主项目
+└───FlutterHybridAndroid Android主项目
 │
 └───flutter_module flutter模块
 ```
