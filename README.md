@@ -1,5 +1,8 @@
 Android和Flutter通信
 
+## 效果预览
+<img src="https://github.com/ydstar/flutter_hybrid/blob/main/FlutterHybridAndroid/preview/show.gif" alt="动图演示效果" width="250px">
+
 ### 目录
 - [项目结构介绍](#项目结构介绍)
 - [如何运行](#如何运行)
