@@ -1,4 +1,3 @@
-### flutter_hybrid
 Android和Flutter通信
 
 ### 目录
