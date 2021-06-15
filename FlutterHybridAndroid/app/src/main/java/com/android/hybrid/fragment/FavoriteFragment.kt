@@ -52,8 +52,10 @@ class FavoriteFragment : FlutterFragment(FlutterCacheManager.MODULE_NAME_FAVORIT
         }
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
+    override fun onDestroy() {
+        super.onDestroy()
+        //销毁Flutter引擎
+        FlutterCacheManager.instance?.destroyCached(FlutterCacheManager.MODULE_NAME_FAVORITE)
     }
 
 }
