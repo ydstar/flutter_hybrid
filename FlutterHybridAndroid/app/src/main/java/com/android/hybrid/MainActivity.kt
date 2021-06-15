@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        findViewById<TextView>(R.id.title).setText("Demo")
+        findViewById<TextView>(R.id.title).setText("FlutterHybridAndroid")
         IStatusBar.setStatusBar(this, true, Color.WHITE, false)
 
         //Android嵌套Flutter并通信

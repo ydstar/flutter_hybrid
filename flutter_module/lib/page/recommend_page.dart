@@ -45,7 +45,7 @@ class _RecommendPageState extends State<RecommendPage> {
             MaterialButton(onPressed: (){
               var map = {"action":"goToLogin"};
               FlutterBridge.getInstance().goToNative(map);
-            },child: Text("Flutter 调用 Android"),)
+            },child: Text("去登陆(Flutter 调用 Android)"),)
           ],
         ),
       ),

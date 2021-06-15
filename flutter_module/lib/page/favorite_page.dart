@@ -45,7 +45,7 @@ class _FavoritePageState extends State<FavoritePage> {
 
               var map = {"action":"goToDetail","goodsId":123456};
               FlutterBridge.getInstance().goToNative(map);
-            },child: Text("Flutter 调用 Android"),)
+            },child: Text("打开商品详情(Flutter 调用 Android)"),)
           ],
         ),
       ),

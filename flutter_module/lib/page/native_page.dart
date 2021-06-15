@@ -10,6 +10,8 @@ class NativePage extends StatefulWidget {
 }
 
 class _NativePageState extends State<NativePage> {
+  String url2 = "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Ff3a58b7a2e90267fcbe72963c5a0b1e305b513ec17fcf-PTscFs_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626323626&t=c5281de39d048b77ebb9442bc0bac382";
+  String url1 = "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fn1.itc.cn%2Fimg8%2Fwb%2Fsmccloud%2Frecom%2F2015%2F06%2F12%2F143410423483487541.JPEG&refer=http%3A%2F%2Fn1.itc.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626323668&t=74a0b9eb57a4dbeeec16b599d5a97ed3";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,8 +29,7 @@ class _NativePageState extends State<NativePage> {
           SizedBox(
               height: 300,
               child: FImageView(
-                url:
-                    "https://www.devio.org/img/beauty_camera/beauty_camera6.jpg",
+                url:url1,
                 onViewCreated: _onViewCreated,
               ))
         ],
@@ -37,9 +38,9 @@ class _NativePageState extends State<NativePage> {
   }
 
   void _onViewCreated(FImageViewController controller) {
-    Future.delayed(Duration(milliseconds: 8000), () {
+    Future.delayed(Duration(milliseconds: 3000), () {
       controller
-          .setUrl("https://www.devio.org/img/beauty_camera/beauty_camera2.jpg");
+          .setUrl(url2);
     });
   }
 }
