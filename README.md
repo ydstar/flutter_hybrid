@@ -24,30 +24,24 @@ flutter_hybrid
 ### Android 主动调用 Flutter
 Android侧
 ``` kotlin
-            FlutterBridge.instance!!.fire(
-                "onRefreshFavorite",
-                "我是收藏的参数",
-                object : MethodChannel.Result {
-                    override fun notImplemented() {
-                        Toast.makeText(context, "dart那边未实现", Toast.LENGTH_LONG).show()
-                    }
+    FlutterBridge.instance!!.fire(
+         "onRefreshFavorite",
+         "我是收藏的参数",
+         object : MethodChannel.Result {
+         override fun notImplemented() {
+               Toast.makeText(context, "dart那边未实现", Toast.LENGTH_LONG).show()
+         }
 
-                    override fun error(
-                        errorCode: String?,
-                        errorMessage: String?,
-                        errorDetails: Any?
-                    ) {
-                        Toast.makeText(context, errorMessage, Toast.LENGTH_LONG).show()
-                    }
+         override fun error(errorCode: String?,errorMessage: String?,errorDetails: Any?) {
+                Toast.makeText(context, errorMessage, Toast.LENGTH_LONG).show()
+         }
 
-                    override fun success(result: Any?) {
-                        if (result != null) {
-                            Toast.makeText(context, result as String, Toast.LENGTH_LONG).show()
-                        }
-                    }
-
-                })
-
+         override fun success(result: Any?) {
+                if (result != null) {
+                     Toast.makeText(context, result as String, Toast.LENGTH_LONG).show()
+                }
+             }
+         })
 ```
 Flutter侧
 
