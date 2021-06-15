@@ -23,7 +23,7 @@ flutter_hybrid
 
 ### Android 主动调用 Flutter
 Android侧
-```
+``` kotlin
             FlutterBridge.instance!!.fire(
                 "onRefreshFavorite",
                 "我是收藏的参数",
@@ -51,7 +51,7 @@ Android侧
 ```
 Flutter侧
 
-```
+``` dart
     var bridge = FlutterBridge.getInstance();
     //监听onRefreshFavorite消息
     bridge.register("onRefreshFavorite", (MethodCall call) {
@@ -63,14 +63,14 @@ Flutter侧
 ```
 ### Flutter 主动调用 Android
 Flutter侧
-```
-              var map = {"action":"goToDetail","goodsId":123456};
-              FlutterBridge.getInstance().goToNative(map);
+``` dart
+   var map = {"action":"goToDetail","goodsId":123456};
+   FlutterBridge.getInstance().goToNative(map);
 ```
 
 Android侧
 
-```
+``` kotlin
     override fun goToNative(p: Any?) {
         if (p is Map<*, *>) {
             val action = p["action"]
