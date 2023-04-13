@@ -28,26 +28,26 @@ class RecommendFragment : FlutterFragment(FlutterCacheManager.MODULE_NAME_RECOMM
             FlutterBridge.instance!!.fire(
                 "onRefreshRecommend",
                 "我是推荐的参数",
-                object : MethodChannel.Result {
-                    override fun notImplemented() {
-                        Toast.makeText(context, "dart那边未实现", Toast.LENGTH_LONG).show()
-                    }
-
-                    override fun error(
-                        errorCode: String?,
-                        errorMessage: String?,
-                        errorDetails: Any?
-                    ) {
-                        Toast.makeText(context, errorMessage, Toast.LENGTH_LONG).show()
-                    }
-
+                object : MethodChannel.Result{
                     override fun success(result: Any?) {
                         if (result != null) {
                             Toast.makeText(context, result as String, Toast.LENGTH_LONG).show()
                         }
                     }
 
-                })
+                    override fun error(
+                        errorCode: String,
+                        errorMessage: String?,
+                        errorDetails: Any?
+                    ) {
+                        Toast.makeText(context, errorMessage, Toast.LENGTH_LONG).show()
+                    }
+
+                    override fun notImplemented() {
+                        Toast.makeText(context, "dart那边未实现", Toast.LENGTH_LONG).show()
+                    }
+                }
+            )
         }
     }
 
