@@ -10,11 +10,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".GoodsDetailActivity"
+            android:exported="false" />
         <activity android:name=".Demo1Activity" />
         <activity android:name=".flutter.MyFlutterActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
-
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

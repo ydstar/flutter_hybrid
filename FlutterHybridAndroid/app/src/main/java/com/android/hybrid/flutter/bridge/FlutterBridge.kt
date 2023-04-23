@@ -1,9 +1,12 @@
 package com.android.hybrid.flutter.bridge
 
+import android.content.Intent
 import android.widget.Toast
+import com.android.hybrid.GoodsDetailActivity
 import com.android.hybrid.flutter.MyFlutterActivity
 import com.android.hybrid.util.ActivityManager
 import com.android.hybrid.util.AppGlobals
+import com.android.hybrid.util.AppGlobals.get
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
@@ -99,7 +102,11 @@ class FlutterBridge : MethodChannel.MethodCallHandler, IFlutterBridge<Any?, Meth
             if (action == "goToDetail") {
                 val goodsId = p["goodsId"]
 
+                //此处也可以使用ARouter路由来进行跳转
                 Toast.makeText(AppGlobals.get(),"商品ID="+goodsId,Toast.LENGTH_LONG).show();
+                val intent = Intent(get(), GoodsDetailActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                AppGlobals.get()?.startActivity(intent)
             } else if (action == "goToLogin") {
                 Toast.makeText(AppGlobals.get(),"去登录",Toast.LENGTH_LONG).show();
             } else {
